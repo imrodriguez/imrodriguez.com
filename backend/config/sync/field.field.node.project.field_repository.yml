@@ -1,0 +1,19 @@
+uuid: c5ebde3b-3df4-433a-a918-ead2988fc871
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_repository
+    - node.type.project
+id: node.project.field_repository
+field_name: field_repository
+entity_type: node
+bundle: project
+label: Repository
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

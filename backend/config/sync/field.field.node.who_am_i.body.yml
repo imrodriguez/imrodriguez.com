@@ -1,0 +1,23 @@
+uuid: 088d20e7-beea-470a-b14b-4b4b7c95d563
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.who_am_i
+  module:
+    - text
+id: node.who_am_i.body
+field_name: body
+entity_type: node
+bundle: who_am_i
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

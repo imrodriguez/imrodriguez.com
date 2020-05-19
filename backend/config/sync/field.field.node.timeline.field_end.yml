@@ -1,0 +1,21 @@
+uuid: 8d6de923-d8a6-489b-ae0b-fee84a020479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end
+    - node.type.timeline
+  module:
+    - datetime
+id: node.timeline.field_end
+field_name: field_end
+entity_type: node
+bundle: timeline
+label: End
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

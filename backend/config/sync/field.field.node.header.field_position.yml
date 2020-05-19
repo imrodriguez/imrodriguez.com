@@ -1,0 +1,19 @@
+uuid: 65df652f-a0aa-4a7f-91ce-ed4e6c4909a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.header
+id: node.header.field_position
+field_name: field_position
+entity_type: node
+bundle: header
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

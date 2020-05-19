@@ -1,0 +1,23 @@
+uuid: 59f6e952-30c8-4766-b130-4df85fec0b37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.timeline
+  module:
+    - text
+id: node.timeline.body
+field_name: body
+entity_type: node
+bundle: timeline
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

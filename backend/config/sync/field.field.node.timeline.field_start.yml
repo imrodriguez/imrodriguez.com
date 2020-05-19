@@ -1,0 +1,21 @@
+uuid: 70f3b742-a5c5-48c8-9004-a1c429d918f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start
+    - node.type.timeline
+  module:
+    - datetime
+id: node.timeline.field_start
+field_name: field_start
+entity_type: node
+bundle: timeline
+label: Start
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,17 @@
+output_values:
+  title: title
+  uri: uri
+  relative: relative
+  key: 0
+  description: 0
+  alias: 0
+  external: 0
+  absolute: 0
+  existing: 0
+  weight: 0
+  expanded: 0
+  enabled: 0
+  uuid: 0
+  options: 0
+base_url: ''
+add_fragment: 0

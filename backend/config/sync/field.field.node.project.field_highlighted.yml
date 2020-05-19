@@ -1,0 +1,23 @@
+uuid: e774a950-ee4c-4178-9df8-2dfc0d725064
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlighted
+    - node.type.project
+id: node.project.field_highlighted
+field_name: field_highlighted
+entity_type: node
+bundle: project
+label: Highlighted
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

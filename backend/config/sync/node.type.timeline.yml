@@ -1,0 +1,18 @@
+uuid: 8d7b117e-67ab-4c13-869b-f1348796586f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Timeline
+type: timeline
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
