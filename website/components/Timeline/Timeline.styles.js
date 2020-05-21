@@ -20,11 +20,7 @@ export const Line = styled.div`
 export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px 0;
-
-    > div {
-        padding: 15px;
-    }
+    gap: 25px 15px;
 
     > div:nth-child(odd) {
         grid-column-start: 2;

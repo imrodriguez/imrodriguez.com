@@ -24,10 +24,11 @@ export const Content = styled.div `
     text-align: center;
 
     @media (max-width: 515px) {
+        position: initial;
+        text-align: center;
+        transform: inherit;
         display: block;
-        bottom: 40px;
         width: 100%;
-        top: auto;
     }
 `
 
@@ -43,6 +44,14 @@ export const Project = styled.div `
         color: #fff;
         text-shadow: 1px 1px 10px #000;
         margin: 0;
+        @media (max-width: 515px) {
+            color: #000;
+            text-shadow: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
     }
 
     @media (min-width: 992px) {
