@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const Nav = (props) => {
-  const [transparent, setTransparent] = useState(false)
+  const [transparent, setTransparent] = useState(true)
   const [menuMobile, toggleMenu] = useState(false)
   const [selected, setSelected] = useState('')
 
   useEffect(() => {
-    if (props.transparent && window.scrollY < 15) setTransparent(true)
+    if (props.transparent && window.scrollY > 15) setTransparent(false)
 
     if (props.transparent) {
       window.onscroll = () => {
