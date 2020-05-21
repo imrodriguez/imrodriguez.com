@@ -2,9 +2,12 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     text-align: ${props => props.align ? props.align : "left"};
+    padding: 0 15px;
+
     @media (min-width: 992px) {
         width: 970px;
         margin: 0 auto;
+        padding: 0;
     }
 `
 
