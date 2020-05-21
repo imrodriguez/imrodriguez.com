@@ -14,15 +14,16 @@ export const Section = styled.div`
 `
 
 export const Button = styled.button`
-    border: 4px solid rgb(91, 190, 105);
-    background: rgb(91, 190, 105);
+    border: 4px solid #05a06d;
+    background: #05a06d;
     font-size: 1.2em;
     color: #fff;
     padding: 5px 20px;
     margin: 20px 0;
 
     &:hover {
-        background: none;
-        color: rgb(91, 190, 105);
+        cursor: pointer;
+        background: #fff;
+        color: #05a06d;
     }
 `

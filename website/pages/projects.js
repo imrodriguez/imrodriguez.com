@@ -8,7 +8,7 @@ export default (props) => (
     <>
         <Head title="Proyectos | Imanol Rodríguez de Maya"
         description="Algunos de los proyectos que voy realizando ya sea para obtener más conocimientos, como para trabajos y la comunidad."
-        url={document.URL} />
+         />
         <Title title="Proyectos" description="Algunos de los proyectos que voy realizando ya sea para obtener más conocimientos, como para trabajos y la comunidad." />
         <Projects projects={props.projects} />
     </>

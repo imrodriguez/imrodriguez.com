@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
 import { Container, Layer, Grid, Project, Content, Title } from './Projects.styles'
 import { Button } from 'styles/global'
@@ -12,7 +11,6 @@ export default (props) => (
           return (
             <Project>
               <a href={`/project/${project.path}`}>
-                <Layer />
                 <img src={`${process.env.API_URL}${project.image}`} alt={project.title} alt={project.title} />
                 <Content>
                   <Title>{project.title}</Title>
@@ -26,7 +24,7 @@ export default (props) => (
     </LazyLoad>
     {
       props.limited
-        ? <Link href="/projects"><a><Button>Ver más</Button></a></Link>
+        ? <a href="/projects"><Button>Ver más</Button></a>
         : <></>
     }
   </Container>

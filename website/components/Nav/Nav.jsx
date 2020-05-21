@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
 import { Menu, MenuItems, Logo } from './Nav.styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -50,18 +49,14 @@ const Nav = (props) => {
           ? <FontAwesomeIcon icon={faTimes} size="xs" onClick={handleMenu} />
           : <FontAwesomeIcon icon={faBars} size="xs" onClick={handleMenu} />
         }
-        <Link href="/">
-          <p><a>imrodriguez</a></p>
-        </Link>
+        <p><a href="/">imrodriguez</a></p>
       </Logo>
       <MenuItems open={menuMobile}>
         {props.links.map((link, index) => (
           link.relative ?
-            <Link href={link.relative} key={index}>
-              <a onClick={() => handleLink(index)}>
-                <li className={index === selected ? 'selected' : ''}>{link.title}</li>
-              </a>
-            </Link>
+            <a href={link.relative} key={index} onClick={() => handleLink(index)}>
+              <li className={index === selected ? 'selected' : ''}>{link.title}</li>
+            </a>
             :
             <></>
         )

@@ -8,17 +8,17 @@ export default (props) => (
         <Head title={`${props.project[0].title} | Imanol Rodríguez de Maya`}
         description={props.project[0].description}
         ogImage={`${process.env.API_URL}${props.project[0].banner}`}
-        url={document.URL} />
+        />
         <img src={`${process.env.API_URL}${props.project[0].banner}`} alt={props.project[0].title} style={{ width: '100%', objectFit: 'cover', height: '30vh'}} />
         <Container align="center">
             <h1>{props.project[0].title}</h1>
             <p>{props.project[0].description}</p>
-            {props.project[0].website !== '' 
-            ? <Button>Sitio web</Button>
+            {props.project[0].web !== '' 
+            ? <a rel="noreferrer" target="_blank" href={props.project[0].web}><Button>Sitio web</Button></a>
             : <></>
             }
             {props.project[0].repository !== '' 
-            ? <Button>repository</Button>
+            ? <a rel="noreferrer" target="_blank" href={props.project[0].repository}><Button>Repositorio</Button></a>
             : <></>
             }
         </Container>

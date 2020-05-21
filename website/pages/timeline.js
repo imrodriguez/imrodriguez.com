@@ -8,7 +8,7 @@ export default (props) => (
     <>
         <Head title="Timeline | Imanol Rodríguez de Maya"
         description="Una muestra de los trabajos, estudios, aprendizaje y eventos que más han marcado mi trayectoria personal."
-        url={document.URL} />
+         />
         <Title title="Timeline" description="Una muestra de los trabajos, estudios, aprendizaje y eventos que más han marcado mi trayectoria personal." />
         <Timeline timeline={props.timeline} />
     </>

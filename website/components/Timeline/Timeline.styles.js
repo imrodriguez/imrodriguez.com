@@ -13,10 +13,7 @@ export const Line = styled.div`
         bottom: 0;
         left: 50%;
         margin-left: -3px;
-        @media (max-width: 960px) {
-            z-index: -1;
-            height: calc(100% - 30px);
-        }
+        z-index: -1;
     }
 `
 

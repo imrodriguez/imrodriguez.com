@@ -5,7 +5,6 @@ import timelineService from 'services/timeline'
 import projectService from 'services/project'
 import headerService from 'services/header'
 import whoamiService from 'services/whoami'
-import Blog from 'components/Blog'
 import Timeline from 'components/Timeline'
 import Projects from 'components/Projects'
 import Header from 'components/Header'
@@ -16,8 +15,8 @@ import { Section } from 'styles/global'
 export default (props) => (
   <>
     <Head title="Home | Imanol Rodríguez de Maya" 
-    description=""
-    url={document.URL}/>
+    description="Soy un desarrollador que ha pasado por varias experiencias diferentes y ahora enfocado en el desarrollo con un stack Javascript y frameworks Front-End."
+  />
     <Header header={props.header} />
     <Section>
       <Title title={props.whoami[0].title} description="" />
@@ -31,7 +30,6 @@ export default (props) => (
       <Title title="Timeline" description="Una muestra de los trabajos, estudios, aprendizaje y eventos que más han marcado mi trayectoria personal." />
       <Timeline timeline={props.timeline} limited />
     </Section>
-    <Blog posts={props.posts} />
   </>
 )
 

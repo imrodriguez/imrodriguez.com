@@ -8,21 +8,11 @@ export const Container = styled.div`
     }
 `
 
-export const Layer = styled.div`
-    width: 100%;
-    height: calc(100% - 4px);
-    background: #5bbe69;
-
-    @media (max-width: 515px) {
-        position: absolute;
-        opacity: 0;
-    }
-`
-
 export const Grid = styled.div `
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 15px;
+
 `
 
 export const Content = styled.div `
@@ -43,6 +33,7 @@ export const Content = styled.div `
 
 export const Project = styled.div `
     position: relative;
+    height: calc(100% - 4px);
 
     img {
         width: 100%;
@@ -54,14 +45,12 @@ export const Project = styled.div `
         margin: 0;
     }
 
-    
-
     @media (min-width: 992px) {
         &:hover {
+            background: #05a06d;
             cursor: pointer;
             img {
-                display: none;
-                filter: blur(1px) grayscale(100%) opacity(0.5);
+                filter: opacity(0);
             }
             ${Content} {
                 display: block;
