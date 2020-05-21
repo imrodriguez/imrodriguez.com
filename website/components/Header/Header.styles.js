@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.div`
         img {
             width: 100%;
             object-fit: cover;
+            object-position: 73%;
             height: 100%
         }
     }
