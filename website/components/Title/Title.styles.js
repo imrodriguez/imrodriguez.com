@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
 export const Title = styled.h2`
     text-align: center;
     margin-bottom: 0;
-    text-transform: uppercase;
     font-size: 3em;
 `
 
