@@ -12,8 +12,7 @@ export const Container = styled.div`
 `
 
 export const Section = styled.div`
-    margin-top: 4em;
-    margin-bottom: 4em;
+    margin: 5em 0;
 `
 
 export const Button = styled.button`
