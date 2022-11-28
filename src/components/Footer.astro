@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import socialData from "../../content/social.json";
 ---
 
@@ -12,7 +13,7 @@ import socialData from "../../content/social.json";
         {socialData.map(social => (
             <div>
                 <a href={social.url} target="_blank" rel="nofollow">
-                    <img src={`/icons/${social.icon}.svg`} alt={social.name}/>
+                    <Image width={24} height={24} src={`/icons/${social.icon}.svg`} alt={social.name}/>
                 </a>
             </div>
         ))}
