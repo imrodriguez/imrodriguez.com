@@ -1,0 +1,67 @@
+---
+import Header from '../components/Header.astro';
+import "@fontsource/alexandria"
+import Footer from '../components/Footer.astro';
+import { Seo } from "astro-seo-meta";
+import { Schema } from "astro-seo-schema";
+
+export interface Props {
+	title: string;
+	description: string;
+	keywords: string[];
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<Seo
+		title={title}
+		description={description}
+		keywords={keywords}
+		icon="/favicon.png"
+		themeColor="#000000"
+		colorScheme="light"
+		facebook={{
+			image: "/facebook.png",
+			url: "https://imrodriguez.com",
+			type: "website",
+		}}
+		twitter={{
+			image: "/twitter.png",
+			site: "https://imrodriguez.com",
+			card: "summary",
+		}}
+	/>
+
+	<Schema
+            item={{
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Imanol Rodriguez de Maya",
+                alternateName: "imrodriguez",
+                knowsAbout: ["Development", "Web"],
+            }}
+        />
+
+		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-2F32KX4VR6"></script>
+		<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-2F32KX4VR6');
+		</script>
+	</head>
+	<body>
+		<Header/>
+		<slot />
+		<Footer/>
+	</body>
+</html>

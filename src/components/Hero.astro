@@ -1,0 +1,26 @@
+---
+import socialData from "../../content/social.json";
+---
+<div class="p-4 container m-auto py-10 md:py-24">
+    <div class="grid grid-cols-[1fr] gap-8 mt-[8em] md:mt-[10em] md:grid-cols-[1fr,1fr] ">
+        <div class="text-center md:text-left order-2 md:order-1 flex justify-center flex-col">
+            <h1 class="text-4xl md:text-[6em] md:leading-[5rem] font-title font-bold">Imanol Rodriguez <br/>de Maya</h1>
+            <div class="justify-center my-4 md:my-0 gap-4 flex md:hidden">
+                {socialData.map(social => (
+                    <div>
+                        <a href={social.url} target="_blank" rel="nofollow">
+                            <img class="w-8" src={`/icons/${social.icon}.svg`} alt={social.name}/>
+                        </a>
+                    </div>
+                ))}
+                </div>
+            <h2 class="my-2 md:my-8">Front-end developer | Making products on the web accessible, SEO friendly and higly performant.</h2>
+        </div>
+        <div class="flex md:justify-end order-1 md:order-2 relative">
+            <div class="w-[22em] h-[22em] md:w-[30em] md:h-[30em] bg-violet rounded-full flex justify-center items-center relative z-20 ml-[-2%] md:ml-[-4%]">
+                <img class="absolute bottom-0 w-[150%] clip-path-ellipse-[16em_22em_at_50%_25%] md:clip-path-ellipse-[20em_30em_at_50%_25%]" src="/me.png"/>
+            </div>
+            <div class="w-[22em] h-[22em] md:w-[30em] md:h-[30em] bg-orange rounded-full z-10 absolute top-[2%] right-[-2%] md:right-[-4%]"></div>
+        </div>
+    </div>
+</div>

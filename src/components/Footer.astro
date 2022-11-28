@@ -1,0 +1,21 @@
+---
+import socialData from "../../content/social.json";
+---
+
+<footer class="container m-auto px-4 py-12">
+    <div class="flex justify-between flex-col md:flex-row">
+        <div class="flex text-center flex-col md:flex-row justify-center items-center gap-4">
+        <p class="font-title font-bold text-lg">imrodriguez</p>
+        <p>Front-end developer | Making products on the web accessible, SEO friendly and higly performant.</p>
+    </div>
+        <div class="flex justify-center my-4 md:my-0 gap-4">
+        {socialData.map(social => (
+            <div>
+                <a href={social.url} target="_blank" rel="nofollow">
+                    <img src={`/icons/${social.icon}.svg`} alt={social.name}/>
+                </a>
+            </div>
+        ))}
+        </div>
+    </div>
+</footer>
