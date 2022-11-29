@@ -1,19 +1,31 @@
 ---
-import menuData from "../../content/menu.json"
-import Button from "./Button.astro";
+import menuData from "../content/menu.json";
+import Contact from "./Contact.astro";
+import Modal from "./Modal.jsx";
+import Nav from "./Nav";
 ---
 
-<header class="p-4  fixed top-0 left-0 right-0 z-50 bg-white">
-    <div class="container m-auto flex justify-between items-center">
-    <p class="font-title font-bold text-xl">imrodriguez</p>
-    <nav class="flex gap-2 justify-between items-center">
+<header class="p-4 fixed top-0 left-0 right-0 z-50 bg-white">
+  <div class="container m-auto flex justify-between items-center">
+    <a href="/"><p class="font-title font-bold text-xl">imrodriguez</p></a>
+
+    <div class="flex justify-center items-center gap-2">
+      <nav class="hidden md:flex gap-2 justify-between items-center">
         <ul class="flex gap-2 justify-between items-center">
-            {menuData.map(menuItem => (
-               <li class="cursor-pointer"><a href={menuItem.url}>{menuItem.title}</a></li> 
-            ))}
+          {
+            menuData.map((menuItem) => (
+              <li class="cursor-pointer font-title font-bold text-lg">
+                <a href={menuItem.url}>{menuItem.title}</a>
+              </li>
+            ))
+          }
         </ul>
-        <Button link="mailto:imanolrodriguezdemaya@gmail.com" text="Contact" icon="contact" />
-  
-    </nav>
-</div>
+      </nav>
+      <Modal client:load>
+        <p class="font-title font-bold text-4xl text-center pb-4">Contact me</p>
+        <Contact />
+      </Modal>
+      <Nav client:load />
+    </div>
+  </div>
 </header>

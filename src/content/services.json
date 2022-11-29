@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Website",
+    "description": "I can build for you an website with a CMS (Wordpress, Drupal, Contentful, etc) based on your designs.",
+    "icon": "website",
+    "url": "/service/website"
+  },
+  {
+    "title": "Webapp",
+    "description": "I can build for you a webapp",
+    "icon": "webapp",
+    "url": "/service/webapp"
+  },
+  {
+    "title": "Ecommerce",
+    "description": "I can build for you an ecommerce ",
+    "icon": "ecommerce",
+    "url": "/service/ecommerce"
+  },
+  {
+    "title": "Support",
+    "description": "I can build for you an ecommerce ",
+    "icon": "support",
+    "url": "/service/support"
+  }
+]

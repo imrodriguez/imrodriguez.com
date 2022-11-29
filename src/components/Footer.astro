@@ -1,21 +1,48 @@
 ---
-import socialData from "../../content/social.json";
+import socialData from "../content/social.json";
+import servicesData from "../content/services.json";
 ---
 
-<footer class="container m-auto px-4 py-12">
-    <div class="flex justify-between flex-col md:flex-row">
-        <div class="flex text-center flex-col md:flex-row justify-center items-center gap-4">
-        <p class="font-title font-bold text-lg">imrodriguez</p>
-        <p>Front-end developer | Making products on the web accessible, SEO friendly and higly performant.</p>
+<footer class="container m-auto py-12 flex flex-col md:flex-row">
+  <div class="flex justify-between flex-col flex-1">
+    <div
+      class="flex flex-col gap-4 justify-center items-center md:items-start md:justify-start"
+    >
+      <p class="font-title font-bold text-lg">imrodriguez</p>
+      <p class="max-w-sm text-center md:text-left">
+        Making products on the web accessible, SEO friendly and higly
+        performant.
+      </p>
     </div>
-        <div class="flex justify-center my-4 md:my-0 gap-4">
-        {socialData.map(social => (
-            <div>
-                <a href={social.url} target="_blank" rel="nofollow">
-                    <img width={24} height={24} src={`/icons/${social.icon}.svg`} alt={social.name}/>
-                </a>
-            </div>
-        ))}
-        </div>
+    <div class="flex justify-center md:justify-start my-4 md:my-0 gap-4">
+      {
+        socialData.map((social) => (
+          <div>
+            <a href={social.url} target="_blank" rel="nofollow">
+              <img
+                width={24}
+                height={24}
+                src={`/icons/${social.icon}.svg`}
+                alt={social.name}
+              />
+            </a>
+          </div>
+        ))
+      }
     </div>
+  </div>
+  <div>
+    <div class="text-center md:text-left">
+      <p class="font-bold font-title text-xl">Services</p>
+      <ul>
+        {
+          servicesData.map((service) => (
+            <li>
+              <a href={service.url}>{service.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
 </footer>

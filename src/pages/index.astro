@@ -1,21 +1,60 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import servicesData from "../content/services.json";
+import Button from "../components/Button.astro";
 ---
 
-<Layout title="imrodriguez | Front-end developer" description="Front-end developer | Making products on the web accessible, SEO friendly and higly performant." keywords={["web", "development", "seo", "performance"]}>
-	<main>
-		<Hero/>
-		<div class="bg-violet text-white">
-			<div class="container m-auto px-4 py-12">
-				<h2 class="text-center text-4xl font-title my-4 mb-8">Who I am</h2>
-					<p class="text-justify md:text-xl">
-						I'm Imanol Rodriguez de Maya a developer based in Barcelona, Spain. Since I was a kid I'm a person passionate with learn new things. With that attitude I discovered the software development and the beautiful concept that comes with it of be able to build things from scratch just imagining and doing some code.
-						<br/><br/>
-						Since I discovered the development I've been doing projects and working in diferents companies always linked with the web technologies and environments, from simple website to complex web apps. 
-</p>
-</div>
-			
-		</div>
-	</main>
+<Layout
+  title="imrodriguez | Front-end developer"
+  description="Front-end developer | Making products on the web accessible, SEO friendly and higly performant."
+  keywords={["web", "development", "seo", "performance"]}
+>
+  <main>
+    <Hero />
+    <div class="bg-violet text-white">
+      <div class="container m-auto px-4 py-24">
+        <h2 class="text-center text-4xl font-title my-4 mb-8">Who I am</h2>
+        <p class="text-justify md:text-xl">
+          I'm Imanol Rodriguez de Maya a developer based in Barcelona, Spain.
+          Since I was a kid I'm a person passionate with learn new things. With
+          that attitude I discovered the software development and the beautiful
+          concept that comes with it of be able to build things from scratch
+          just imagining and doing some code.
+          <br /><br />
+          Since I discovered the development I've been doing projects and working
+          in diferents companies always linked with the web technologies and environments,
+          from simple website to complex web apps.
+        </p>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="container m-auto px-4 py-12">
+        <h2 class="text-center text-4xl font-title my-4 mb-8">Services</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(500px,_1fr))] gap-8"
+        >
+          {
+            servicesData.map((service) => (
+              <div class="flex flex-col justify-center text-center  p-4 rounded-md relative">
+                <img
+                  class="w-24 m-auto"
+                  src={`/icons/${service.icon}.svg`}
+                  width="24"
+                  height="24"
+                  alt={service.title}
+                />
+                <p class="font-title font-bold text-2xl my-2">
+                  {service.title}
+                </p>
+                <p class="max-w-xs m-auto">{service.description}</p>
+                <Button link={service.url} style="my-4 " text="Know more" />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>

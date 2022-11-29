@@ -1,27 +1,58 @@
 ---
-import socialData from "../../content/social.json";
-import { Image } from '@astrojs/image/components';
+import socialData from "../content/social.json";
+import { Image } from "@astrojs/image/components";
+import { motion } from "framer-motion";
 ---
+
 <div class="p-4 container m-auto py-10 lg:py-24">
-    <div class="grid grid-cols-[1fr] gap-8 mt-[8em] lg:mt-[10em] lg:grid-cols-[1fr,1fr] ">
-        <div class="text-center lg:text-left order-2 lg:order-1 flex justify-center flex-col">
-            <h1 class="text-4xl lg:text-[6em] lg:leading-[5rem] font-title font-bold">Imanol Rodriguez <br/>de Maya</h1>
-            <div class="justify-center my-4 lg:my-0 gap-4 flex lg:hidden">
-                {socialData.map(social => (
-                    <div>
-                        <a href={social.url} target="_blank" rel="nofollow">
-                            <img width={24} height={24} class="w-8" src={`/icons/${social.icon}.svg`} alt={social.name}/>
-                        </a>
-                    </div>
-                ))}
-                </div>
-            <h2 class="my-2 lg:my-8">Front-end developer | Making products on the web accessible, SEO friendly and higly performant.</h2>
-        </div>
-        <div class="flex justify-center lg:justify-end order-1 lg:order-2 relative">
-            <div class="aspect-square w-[22em] lg:w-[30em] bg-violet rounded-full flex justify-center items-center relative z-20 ml-[-2%] lg:ml-[-4%]">
-                <Image width="704" height="938" format="webp" class="absolute bottom-0 w-[150%] clip-path-ellipse-[16em_22em_at_50%_25%] lg:clip-path-ellipse-[20em_30em_at_50%_25%]" src="/me.png" alt="Imanol Rodriguez de Maya"/>
+  <div
+    class="grid grid-cols-[1fr] gap-8 mt-[8em] lg:mt-[10em] lg:grid-cols-[1fr,1fr]"
+  >
+    <div
+      class="text-center lg:text-left order-2 lg:order-1 flex justify-center flex-col"
+    >
+      <h1 class="text-4xl lg:text-[6em] lg:leading-[5rem] font-title font-bold">
+        Imanol Rodriguez <br />de Maya
+      </h1>
+      <div class="justify-center my-4 lg:my-0 gap-4 flex lg:hidden">
+        {
+          socialData.map((social) => (
+            <div>
+              <a href={social.url} target="_blank" rel="nofollow">
+                <img
+                  width={24}
+                  height={24}
+                  class="w-8"
+                  src={`/icons/${social.icon}.svg`}
+                  alt={social.name}
+                />
+              </a>
             </div>
-            <div class="aspect-square w-[22em] lg:w-[30em] bg-orange rounded-full z-10 absolute top-[2%] right-[-2%] md:right-[23%] lg:right-[-4%]"></div>
-        </div>
+          ))
+        }
+      </div>
+      <h2 class="my-2 lg:my-8">
+        Front-end developer | Making products on the web accessible, SEO
+        friendly and higly performant.
+      </h2>
     </div>
+    <div class="flex justify-center lg:justify-end order-1 lg:order-2 relative">
+      <div
+        class="aspect-square w-[22em] lg:w-[30em] bg-violet rounded-full flex justify-center items-center relative z-20 ml-[-2%] lg:ml-[-4%]"
+      >
+        <Image
+          width="704"
+          height="938"
+          format="webp"
+          class="absolute bottom-0 w-[150%] clip-path-ellipse-[16em_22em_at_50%_25%] lg:clip-path-ellipse-[20em_30em_at_50%_25%]"
+          src="/me.png"
+          alt="Imanol Rodriguez de Maya"
+        />
+      </div>
+      <div
+        class="aspect-square w-[22em] lg:w-[30em] bg-orange rounded-full z-10 absolute top-[2%] right-[-2%] md:right-[23%] lg:right-[-4%]"
+      >
+      </div>
+    </div>
+  </div>
 </div>

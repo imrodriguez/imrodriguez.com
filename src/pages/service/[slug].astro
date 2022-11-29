@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("../../content/service/*.mdx");
+
+  return posts.map(
+    ({
+      Content,
+      frontmatter: { title, seoMetaDescription: metadescription, slug },
+    }) => {
+      return {
+        params: { slug },
+        props: { Content, title, metadescription },
+      };
+    }
+  );
+}
+
+const { Content, title, metadescription, focusKeyphrase } = Astro.props;
+const { slug } = Astro.params;
+---
+
+<Layout
+  title={`${title} | imrodriguez`}
+  description={metadescription}
+  keywords={[]}
+>
+  <main class="mt-20 container m-auto">
+    <h1 class="font-title font-bold uppercase text-4xl text-center">{title}</h1>
+    <p class="text-center">{focusKeyphrase}</p>
+    <div class="container text-justify my-8">
+      <Content />
+    </div>
+  </main>
+</Layout>

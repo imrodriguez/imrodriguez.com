@@ -1,8 +1,21 @@
 ---
-const { icon, text, link } = Astro.props;
+const { icon, text, link, style } = Astro.props;
 ---
 
-<a href={link} class="bg-violet hover:bg-violet-light py-2 px-4 rounded-lg text-white font-title font-bold flex justify-center items-center gap-2">
-    {icon && <img width={24} height={24}  src={`/icons/${icon}.svg`} class="w-6" alt="button icon"/>}
-    {text}
+<a
+  href={link}
+  class={`bg-violet hover:bg-violet-light py-2 px-4 rounded-lg text-white font-title font-bold flex justify-center items-center gap-2 ${style}`}
+>
+  {
+    icon && (
+      <img
+        width={24}
+        height={24}
+        src={`/icons/${icon}.svg`}
+        class="w-6"
+        alt="button icon"
+      />
+    )
+  }
+  {text}
 </a>
