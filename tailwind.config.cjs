@@ -4,12 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				title: ["'Alexandria'", "sans-serif"]
+				title: ["'Adventuro'", "sans-serif"],
+				subtitle: ["'Alexandria'", "sans-serif"],
 			},
 			colors: {
 				orange: "#FF6D00",
 				violet: "#3C096C",
-				"violet-light": "#5A189A"
+				"violet-light": "#5A189A",
+				"orange-light": "#FF8500",
 			}
 		},
 	},

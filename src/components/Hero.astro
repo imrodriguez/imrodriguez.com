@@ -1,7 +1,7 @@
 ---
 import socialData from "../content/social.json";
 import { Image } from "@astrojs/image/components";
-import { motion } from "framer-motion";
+import { t } from "i18next";
 ---
 
 <div class="p-4 container m-auto py-10 lg:py-24">
@@ -11,8 +11,10 @@ import { motion } from "framer-motion";
     <div
       class="text-center lg:text-left order-2 lg:order-1 flex justify-center flex-col"
     >
-      <h1 class="text-4xl lg:text-[6em] lg:leading-[5rem] font-title font-bold">
-        Imanol Rodriguez <br />de Maya
+      <h1
+        class="text-[2.5em] leading-[1em] lg:text-[6em] lg:leading-[5rem] font-title"
+      >
+        {t("home.hero.title")}
       </h1>
       <div class="justify-center my-4 lg:my-0 gap-4 flex lg:hidden">
         {
@@ -32,25 +34,25 @@ import { motion } from "framer-motion";
         }
       </div>
       <h2 class="my-2 lg:my-8">
-        Front-end developer | Making products on the web accessible, SEO
-        friendly and higly performant.
+        {t("home.hero.description")}
       </h2>
     </div>
     <div class="flex justify-center lg:justify-end order-1 lg:order-2 relative">
       <div
-        class="aspect-square w-[22em] lg:w-[30em] bg-violet rounded-full flex justify-center items-center relative z-20 ml-[-2%] lg:ml-[-4%]"
+        class="aspect-square w-full md:w-[22em] lg:w-[30em] bg-violet rounded-full flex justify-center items-center relative z-20 ml-[-2%] lg:ml-[-4%]"
       >
         <Image
           width="704"
           height="938"
           format="webp"
-          class="absolute bottom-0 w-[150%] clip-path-ellipse-[16em_22em_at_50%_25%] lg:clip-path-ellipse-[20em_30em_at_50%_25%]"
+          class="absolute bottom-0 w-[150%] clip-path-circle-[55.8%_at_50%_50%] md:clip-path-ellipse-[16em_22em_at_50%_25%] lg:clip-path-ellipse-[20em_30em_at_50%_25%]"
           src="/me.png"
           alt="Imanol Rodriguez de Maya"
+          loading="eager"
         />
       </div>
       <div
-        class="aspect-square w-[22em] lg:w-[30em] bg-orange rounded-full z-10 absolute top-[2%] right-[-2%] md:right-[23%] lg:right-[-4%]"
+        class="aspect-square w-full md:w-[22em] lg:w-[30em] bg-orange rounded-full z-10 absolute top-[2%] right-[-2%] md:right-[23%] lg:right-[-4%]"
       >
       </div>
     </div>

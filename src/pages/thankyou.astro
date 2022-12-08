@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
+import { Image } from "@astrojs/image/components";
+
+changeLanguage("en");
+---
+
+<Layout
+  title={t("thanks.title")}
+  description={t("thanks.description")}
+  keywords={["web", "development", "seo", "performance"]}
+  disableContact={true}
+>
+  <main class="bg-violet">
+    <div class="container m-auto pt-24 text-center">
+      <h1
+        class="mt-1 text-4xl font-bold tracking-tight text-gray-200 sm:text-5xl lg:text-6xl"
+      >
+        {t("thanks.title")}
+      </h1>
+      <p class="mx-auto mt-5 max-w-4xl text-xl text-gray-200">
+        {t("thanks.subtitle")}
+      </p>
+      <Image
+        class="w-96 m-auto my-8"
+        width={2454}
+        height={2919}
+        src="/illustrations/thanks.png"
+        alt="thank you"
+      />
+    </div>
+  </main>
+</Layout>

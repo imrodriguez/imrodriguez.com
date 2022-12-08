@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "website": "Website",
+    "webapp": "Webapp",
+    "ecommerce": "Ecommerce",
+    "support": "Support",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "Contact me to know more",
+    "privacy": "By selecting this, you agree to the Privacy Policy and Cookie Policy.",
+    "fields": {
+      "firstname": "First Name",
+      "lastname": "Last name",
+      "company": "Company",
+      "email": "Email",
+      "message": "Message"
+    },
+    "action": "Let's talk"
+  },
+  "home": {
+    "seo": {
+      "title": "imrodriguez | Front-end developer",
+      "description": "Front-end developer | Making fast, accessible, SEO friendly and higly performant products on the web."
+    },
+    "hero": {
+      "title": "Imanol Rodriguez de Maya",
+      "description": "Front-end developer | Making fast, accessible, SEO friendly and higly performant products on the web."
+    },
+    "whoiam": {
+      "subtitle": "A little bit about me",
+      "title": "Who I am?",
+      "content": "I'm Imanol Rodriguez de Maya a developer based in Barcelona, Spain. Since I was a kid I'm a person passionate with learn new things. With that attitude I discovered the software development and the beautiful concept that comes with it of be able to build things from scratch just imagining and doing some code. <br /><br /> Since I discovered the development I've been doing projects and working in differents companies always linked with the web technologies and environments, from simple website to complex web apps."
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "Some services that I can provide",
+      "action": "Know more",
+      "website": {
+        "title": "Website",
+        "description": "Get a fast, accessible and SEO friendly website managed from a CMS (Wordpress, Drupal, Contentful, etc) based on your designs."
+      },
+      "webapp": {
+        "title": "Webapp",
+        "description": "Get a higly performant web application with authentication and complex features."
+      },
+      "ecommerce": {
+        "title": "Ecommerce",
+        "description": "Get a ready to sell ecommerce with a fast website and optimized process of checkout."
+      },
+      "support": {
+        "title": "Support",
+        "description": "Get technical support or help in your web projects."
+      }
+    }
+  },
+  "thanks": {
+    "title": "Thanks!",
+    "subtitle": "Thanks for your message, I'll contact you soon."
+  }
+}

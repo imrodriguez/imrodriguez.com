@@ -1,11 +1,11 @@
 ---
 import i18next, { changeLanguage, t } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import DeliverSection from "../../components/DeliverSection.astro";
-import InfoService from "../../components/InfoService.astro";
-import { getContentByLanguage } from "../../helpers/getContentByLanguage";
+import Layout from "../../../layouts/Layout.astro";
+import DeliverSection from "../../../components/DeliverSection.astro";
+import InfoService from "../../../components/InfoService.astro";
+import { getContentByLanguage } from "../../../helpers/getContentByLanguage";
 
-changeLanguage("en");
+changeLanguage("es");
 
 export async function getStaticPaths() {
     const services = await Astro.glob("/src/content/service/**/*.mdx");

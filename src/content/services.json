@@ -1,25 +1,25 @@
 [
   {
-    "title": "Website",
-    "description": "I can build for you an website with a CMS (Wordpress, Drupal, Contentful, etc) based on your designs.",
+    "title": "home.services.website.title",
+    "description": "home.services.website.description",
     "icon": "website",
     "url": "/service/website"
   },
   {
-    "title": "Webapp",
-    "description": "I can build for you a webapp",
+    "title": "home.services.webapp.title",
+    "description": "home.services.webapp.description",
     "icon": "webapp",
     "url": "/service/webapp"
   },
   {
-    "title": "Ecommerce",
-    "description": "I can build for you an ecommerce ",
+    "title": "home.services.ecommerce.title",
+    "description": "home.services.ecommerce.description",
     "icon": "ecommerce",
     "url": "/service/ecommerce"
   },
   {
-    "title": "Support",
-    "description": "I can build for you an ecommerce ",
+    "title": "home.services.support.title",
+    "description": "home.services.support.description",
     "icon": "support",
     "url": "/service/support"
   }

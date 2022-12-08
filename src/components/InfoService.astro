@@ -1,0 +1,62 @@
+---
+import {
+  BoltIcon,
+  GlobeAltIcon,
+  LifebuoyIcon,
+  QueueListIcon,
+  DevicePhoneMobileIcon,
+} from "@heroicons/react/20/solid/index.js";
+
+interface Props {
+  title: string;
+  description: string;
+  icon?: "bolt" | "globe" | "lifebuoy" | "queue" | "phone";
+}
+
+const { title, description, icon }: Props = Astro.props;
+
+const iconConfig = {
+  ["bolt"]: {
+    icon: BoltIcon,
+  },
+  ["globe"]: {
+    icon: GlobeAltIcon,
+  },
+  ["lifebuoy"]: {
+    icon: LifebuoyIcon,
+  },
+  ["queue"]: {
+    icon: QueueListIcon,
+  },
+  ["phone"]: {
+    icon: DevicePhoneMobileIcon,
+  },
+};
+
+const iconSelected = icon
+  ? iconConfig[icon] || iconConfig.bolt
+  : iconConfig.bolt;
+---
+
+<div class="p-6">
+  <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+    <div class="-mt-6">
+      <div class="text-center">
+        <span
+          class="inline-flex items-center justify-center rounded-xl bg-violet p-3 shadow-lg"
+        >
+          <iconSelected.icon
+            className="h-6 w-6 fill-white"
+            aria-hidden="true"
+          />
+        </span>
+      </div>
+      <h3
+        class="mt-8 text-2xl text-center font-semibold leading-8 tracking-tight text-gray-900"
+      >
+        {title}
+      </h3>
+      <p class="mt-5 text-base leading-7 text-gray-600">{description}</p>
+    </div>
+  </div>
+</div>

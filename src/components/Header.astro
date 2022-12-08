@@ -1,31 +1,57 @@
 ---
-import menuData from "../content/menu.json";
-import Contact from "./Contact.astro";
-import Modal from "./Modal.jsx";
+import getMenuData from "../content/menu";
 import Nav from "./Nav";
+import Dropdown from "./Dropdown";
+import { getLanguageUrl } from "../helpers/getLanguageUrl";
+const menuData = getMenuData();
 ---
 
 <header class="p-4 fixed top-0 left-0 right-0 z-50 bg-white">
   <div class="container m-auto flex justify-between items-center">
-    <a href="/"><p class="font-title font-bold text-xl">imrodriguez</p></a>
+    <a href={getLanguageUrl("/")}
+      ><p class="font-title font-bold text-2xl md:text-4xl">imrodriguez</p>
+    </a>
 
     <div class="flex justify-center items-center gap-2">
-      <nav class="hidden md:flex gap-2 justify-between items-center">
-        <ul class="flex gap-2 justify-between items-center">
+      <nav class="hidden md:flex gap-4 justify-between items-center mr-4">
+        <ul class="flex gap-4 justify-between items-center">
           {
             menuData.map((menuItem) => (
-              <li class="cursor-pointer font-title font-bold text-lg">
-                <a href={menuItem.url}>{menuItem.title}</a>
+              <li class="cursor-pointer text-lg">
+                {menuItem.childrens ? (
+                  <Dropdown
+                    client:load
+                    value={menuItem.title}
+                    items={menuItem.childrens}
+                  />
+                ) : (
+                  <a
+                    class="text-base font-medium text-gray-900 hover:text-gray-400 focus:outline-none"
+                    href={menuItem.url}
+                  >
+                    {menuItem.title}
+                  </a>
+                )}
               </li>
             ))
           }
         </ul>
       </nav>
-      <Modal client:load>
-        <p class="font-title font-bold text-4xl text-center pb-4">Contact me</p>
-        <Contact />
-      </Modal>
-      <Nav client:load />
+
+      <a
+        href="#contact"
+        class={`bg-violet hover:bg-violet-light py-2 px-4 rounded-md text-white font-subtitle font-bold flex justify-center items-center gap-2`}
+      >
+        <img
+          width={24}
+          height={24}
+          src={`/icons/contact.svg`}
+          class="w-6"
+          alt="button icon"
+        />
+        Contact
+      </a>
+      <Nav client:load data={menuData} />
     </div>
   </div>
 </header>

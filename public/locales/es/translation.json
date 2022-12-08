@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "website": "Website",
+    "webapp": "Webapp",
+    "ecommerce": "Ecommerce",
+    "support": "Soporte",
+    "contact": "Contactar"
+  },
+  "home": {
+    "seo": {
+      "title": "imrodriguez | Front-end developer",
+      "description": "Front-end developer | Making products on the web accessible, SEO friendly and higly performant."
+    },
+    "hero": {
+      "title": "Imanol Rodriguez de Maya",
+      "description": "Front-end developer | Making products on the web accessible, SEO friendly and higly performant."
+    },
+    "whoiam": {
+      "title": "​¿Quién soy?",
+      "content": "Soy Imanol Rodriguez de Maya un desarrollador basado en Barcelona, ​​España. Desde niño soy una persona apasionada por aprender cosas nuevas. Con esa actitud descubrí el desarrollo de software y la hermosa concepto que viene con él de poder construir cosas desde cero solo imaginando y haciendo algo de código. <br /><br /> Desde que descubrí el desarrollo he estado haciendo proyectos y trabajando en diferentes empresas siempre ligadas a las tecnologías y entornos web, desde un sitio web simple hasta aplicaciones web complejas."
+    },
+    "services": {
+      "title": "Services",
+      "action": "Saber mas",
+      "website": {
+        "title": "Pagina web",
+        "description": "I can build for you an website with a CMS (Wordpress, Drupal, Contentful, etc) based on your designs."
+      },
+      "webapp": {
+        "title": "Aplicacion web",
+        "description": "I can build for you a webapp"
+      },
+      "ecommerce": {
+        "title": "Tienda online",
+        "description": "I can build for you an ecommerce."
+      },
+      "support": {
+        "title": "Soporte",
+        "description": "I can build for you an ecommerce."
+      }
+    }
+  }
+}
