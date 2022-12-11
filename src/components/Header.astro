@@ -4,12 +4,22 @@ import Nav from "./Nav";
 import Dropdown from "./Dropdown";
 import { getLanguageUrl } from "../helpers/getLanguageUrl";
 const menuData = getMenuData();
+import { t } from "i18next";
+import { Image } from "@astrojs/image/components";
 ---
 
 <header class="p-4 fixed top-0 left-0 right-0 z-50 bg-white">
   <div class="container m-auto flex justify-between items-center">
-    <a href={getLanguageUrl("/")}
-      ><p class="font-title font-bold text-2xl md:text-4xl">imrodriguez</p>
+    <a href={getLanguageUrl("/")} class="flex items-center">
+      <Image
+        src="/logo.png"
+        alt="logo"
+        class="w-12 mr-2"
+        width={48}
+        height={48}
+        format={"webp"}
+      />
+      <p>imrodriguez</p>
     </a>
 
     <div class="flex justify-center items-center gap-2">
@@ -38,9 +48,9 @@ const menuData = getMenuData();
         </ul>
       </nav>
 
-      <a
+      <!--<a
         href="#contact"
-        class={`bg-violet hover:bg-violet-light py-2 px-4 rounded-md text-white font-subtitle font-bold flex justify-center items-center gap-2`}
+        class={` bg-violet hover:bg-violet-light py-2 px-4 rounded-md text-white font-subtitle font-bold flex justify-center items-center gap-2`}
       >
         <img
           width={24}
@@ -49,8 +59,8 @@ const menuData = getMenuData();
           class="w-6"
           alt="button icon"
         />
-        Contact
-      </a>
+        {t("nav.contact")}
+      </a>-->
       <Nav client:load data={menuData} />
     </div>
   </div>

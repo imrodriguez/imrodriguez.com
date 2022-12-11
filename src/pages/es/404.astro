@@ -1,14 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
 import { Image } from "@astrojs/image/components";
 
-changeLanguage("en");
+changeLanguage("es");
 ---
 
 <Layout
-  title={t("thanks.title")}
-  description={t("thanks.description")}
+  title={`${t("404.title")} ${t("404.subtitle")}`}
+  description={t("404.description")}
   keywords={["web", "development", "seo", "performance"]}
   disableContact={true}
   noIndex={true}
@@ -18,17 +18,20 @@ changeLanguage("en");
       <h1
         class="mt-1 text-4xl font-bold tracking-tight text-gray-200 sm:text-5xl lg:text-6xl"
       >
-        {t("thanks.title")}
+        {t("404.title")}
       </h1>
+      <h2 class="mx-auto max-w-4xl text-4xl text-gray-200">
+        {t("404.subtitle")}
+      </h2>
       <p class="mx-auto mt-5 max-w-4xl text-xl text-gray-200">
-        {t("thanks.subtitle")}
+        {t("404.description")}
       </p>
       <Image
         class="w-96 m-auto my-8"
         width={2454}
         height={2919}
-        src="/illustrations/thanks.png"
-        alt="thank you"
+        src="/illustrations/404.png"
+        alt="Not found"
       />
     </div>
   </main>

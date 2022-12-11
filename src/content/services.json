@@ -16,11 +16,5 @@
     "description": "home.services.ecommerce.description",
     "icon": "ecommerce",
     "url": "/service/ecommerce"
-  },
-  {
-    "title": "home.services.support.title",
-    "description": "home.services.support.description",
-    "icon": "support",
-    "url": "/service/support"
   }
 ]

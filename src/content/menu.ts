@@ -25,13 +25,12 @@ export default function() {
           "title": t("nav.ecommerce"),
           "url": getLanguageUrl("/service/ecommerce"),
           "icon": "ecommerce"
-        },
-        {
-          "title": t("nav.support"),
-          "url": getLanguageUrl("/service/support"),
-          "icon": "support"
         }
       ]
+    },
+    {
+      "title": t("nav.about"),
+      "url": getLanguageUrl("/about-me")
     }
   ]
 } 

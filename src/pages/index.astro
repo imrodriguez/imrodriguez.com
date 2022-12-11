@@ -15,11 +15,15 @@ changeLanguage("en");
   description={t("home.seo.description")}
   keywords={["web", "development", "seo", "performance"]}
 >
+  <script
+    defer
+    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+  ></script>
   <main>
     <Hero />
 
     <div class="bg-violet">
-      <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div class="container m-auto py-8 md:py-12">
         <div class="text-center">
           <p class="text-lg font-semibold text-orange">
             {t("home.whoiam.subtitle")}
@@ -29,10 +33,25 @@ changeLanguage("en");
           >
             {t("home.whoiam.title")}
           </h2>
-          <p
-            class="mx-auto mt-5 max-w-4xl text-xl text-gray-200 text-justify"
-            set:html={t("home.whoiam.content")}
-          />
+        </div>
+        <div
+          class="grid grid-cols-[1fr] items-center lg:grid-cols-[1fr,1fr] gap-8 py-4 px-4 sm:py-8 sm:px-6 lg:px-8"
+        >
+          <div class="min-h-[20rem] md:min-w-[40rem] md:min-h-[40rem]">
+            <lottie-player
+              src="/animations/sq6TpjIV1n.json"
+              background="transparent"
+              speed="1"
+              class="w-[20rem] md:w-full aspect-square m-auto"
+              loop
+              autoplay></lottie-player>
+          </div>
+          <div class="text-center">
+            <p
+              class="mx-auto mt-5 max-w-4xl text-xl text-gray-200 text-justify"
+              set:html={t("home.whoiam.content")}
+            />
+          </div>
         </div>
       </div>
     </div>

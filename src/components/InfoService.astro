@@ -5,12 +5,21 @@ import {
   LifebuoyIcon,
   QueueListIcon,
   DevicePhoneMobileIcon,
+  ShoppingCartIcon,
+  CreditCardIcon,
 } from "@heroicons/react/20/solid/index.js";
 
 interface Props {
   title: string;
   description: string;
-  icon?: "bolt" | "globe" | "lifebuoy" | "queue" | "phone";
+  icon?:
+    | "bolt"
+    | "globe"
+    | "lifebuoy"
+    | "queue"
+    | "phone"
+    | "shopping-cart"
+    | "credit-card";
 }
 
 const { title, description, icon }: Props = Astro.props;
@@ -31,6 +40,12 @@ const iconConfig = {
   ["phone"]: {
     icon: DevicePhoneMobileIcon,
   },
+  ["shopping-cart"]: {
+    icon: ShoppingCartIcon,
+  },
+  ["credit-card"]: {
+    icon: CreditCardIcon,
+  },
 };
 
 const iconSelected = icon
@@ -38,8 +53,8 @@ const iconSelected = icon
   : iconConfig.bolt;
 ---
 
-<div class="p-6">
-  <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+<div class="p-6 h-full">
+  <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8 h-full">
     <div class="-mt-6">
       <div class="text-center">
         <span

@@ -6,6 +6,7 @@ module.exports = {
 			fontFamily: {
 				title: ["'Adventuro'", "sans-serif"],
 				subtitle: ["'Alexandria'", "sans-serif"],
+				inter: ["'Inter'", "sans-serif"],
 			},
 			colors: {
 				orange: "#FF6D00",
@@ -15,5 +16,5 @@ module.exports = {
 			}
 		},
 	},
-	plugins: [require('tailwind-clip-path')],
+	plugins: [require('tailwind-clip-path'), require('@tailwindcss/typography'),],
 }

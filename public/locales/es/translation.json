@@ -6,7 +6,20 @@
     "webapp": "Webapp",
     "ecommerce": "Ecommerce",
     "support": "Soporte",
-    "contact": "Contactar"
+    "contact": "Contactar",
+    "about": "Sobre mi"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "description": "Contact me to know more",
+    "privacy": "By selecting this, you agree to the Privacy Policy and Cookie Policy.",
+    "fields": {
+      "firstname": "Nombre",
+      "lastname": "Apellidos",
+      "email": "Email",
+      "message": "Mensaje"
+    },
+    "action": "Hablemos"
   },
   "home": {
     "seo": {
@@ -18,11 +31,13 @@
       "description": "Front-end developer | Making products on the web accessible, SEO friendly and higly performant."
     },
     "whoiam": {
+      "subtitle": "Un poco sobre mi",
       "title": "​¿Quién soy?",
-      "content": "Soy Imanol Rodriguez de Maya un desarrollador basado en Barcelona, ​​España. Desde niño soy una persona apasionada por aprender cosas nuevas. Con esa actitud descubrí el desarrollo de software y la hermosa concepto que viene con él de poder construir cosas desde cero solo imaginando y haciendo algo de código. <br /><br /> Desde que descubrí el desarrollo he estado haciendo proyectos y trabajando en diferentes empresas siempre ligadas a las tecnologías y entornos web, desde un sitio web simple hasta aplicaciones web complejas."
+      "content": "Hola! Soy Imanol Rodriguez de Maya, un desarrollador que vive en Barcelona, España. Con experiencia como desarrollador Front end, me especializo en optimizar, mejorar el rendimiento y entregar productos web de alta calidad.<br/><br/>La web y el desarrollo son mis pasiones, y como parte de esa pasión, ofrezco servicios para ayudar a su negocio a crecer a través de excelentes sitios web, aplicaciones web o plataformas de comercio electrónico. Estoy dedicado a usar mis habilidades y experiencia para ayudarlo a tener éxito en línea.<br/><br/>Además, soy un solucionador de problemas y un jugador de equipo. Me gusta trabajar de cerca con los clientes y colaborar con otros profesionales para crear soluciones que sean efectivas, eficientes y fáciles de usar. Siempre estoy buscando nuevos desafíos y oportunidades para crecer y aprender, y estoy comprometido a entregar trabajo de alta calidad que cumpla o exceda sus expectativas.<br/><br/>Ya sea que necesite alguno de los servicios que ofrezco o ayuda con un proyecto en línea existente, estoy aquí para ayudar. No dude en contactarme para discutir sus necesidades y objetivos, y para obtener más información sobre cómo puedo ayudarlo. ¡Espero trabajar con usted!"
     },
     "services": {
-      "title": "Services",
+      "title": "Servicios",
+      "subtitle": "Algunos servicios que puedo ofrecerte",
       "action": "Saber mas",
       "website": {
         "title": "Pagina web",
@@ -40,6 +55,24 @@
         "title": "Soporte",
         "description": "I can build for you an ecommerce."
       }
+    }
+  },
+  "thanks": {
+    "title": "Thanks!",
+    "subtitle": "Thanks for your message, I'll contact you soon."
+  },
+  "404": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "description": "The page you are looking for does not exist."
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "A little bit about me",
+    "description": "About me",
+    "seo": {
+      "title": "About me",
+      "description": "About me"
     }
   }
 }

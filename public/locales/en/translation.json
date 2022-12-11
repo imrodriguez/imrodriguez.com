@@ -6,7 +6,8 @@
     "webapp": "Webapp",
     "ecommerce": "Ecommerce",
     "support": "Support",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about": "About me"
   },
   "contact": {
     "title": "Contact me",
@@ -33,7 +34,7 @@
     "whoiam": {
       "subtitle": "A little bit about me",
       "title": "Who I am?",
-      "content": "I'm Imanol Rodriguez de Maya a developer based in Barcelona, Spain. Since I was a kid I'm a person passionate with learn new things. With that attitude I discovered the software development and the beautiful concept that comes with it of be able to build things from scratch just imagining and doing some code. <br /><br /> Since I discovered the development I've been doing projects and working in differents companies always linked with the web technologies and environments, from simple website to complex web apps."
+      "content": "Hi! I’m Imanol Rodriguez de Maya, a developer based in Barcelona, Spain. With experience as a Front end developer, I specialize in optimizing, improving performance, and delivering high-quality web products.<br/><br/> The web and development are my passions, and as part of that passion, I offer services to help your business grow through great websites, web apps, or e-commerce platforms. I am dedicated to using my skills and expertise to help you succeed online.<br/><br/> In addition, I am a problem-solver and a team player. I enjoy working closely with clients and collaborating with other professionals to create solutions that are effective, efficient, and user-friendly. I am always looking for new challenges and opportunities to grow and learn, and I am committed to delivering top-quality work that meets or exceeds your expectations.<br/><br/> Whether you need some of the services that I offer or help with an existing online project, I am here to help. Please feel free to contact me to discuss your needs and goals, and to learn more about how I can help you. I look forward to working with you!"
     },
     "services": {
       "title": "Services",
@@ -60,5 +61,19 @@
   "thanks": {
     "title": "Thanks!",
     "subtitle": "Thanks for your message, I'll contact you soon."
+  },
+  "404": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "description": "The page you are looking for does not exist."
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "A little bit about me",
+    "description": "About me",
+    "seo": {
+      "title": "About me",
+      "description": "About me"
+    }
   }
 }

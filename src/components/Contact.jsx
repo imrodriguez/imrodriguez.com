@@ -110,12 +110,12 @@ export const Contact = ({ content }) => {
           />
         </svg>
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-orange sm:text-4xl">
-            {content.title}
-          </h2>
-          <p className="mt-4 text-lg leading-6 text-white">
+          <p className="text-lg font-semibold text-orange">
             {content.description}
           </p>
+          <h2 className="mt-1 text-4xl font-bold tracking-tight text-gray-200 sm:text-5xl lg:text-6xl">
+            {content.title}
+          </h2>
         </div>
         <div className="mt-12">
           <form

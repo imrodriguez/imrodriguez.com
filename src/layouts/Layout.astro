@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import "@fontsource/alexandria";
+import "@fontsource/inter/700.css";
 import Footer from "../components/Footer.astro";
 import { Seo } from "astro-seo-meta";
 import { Schema } from "astro-seo-schema";
@@ -15,9 +16,10 @@ export interface Props {
   description: string;
   keywords: string[];
   disableContact?: boolean;
+  noIndex?: boolean;
 }
 
-const { title, description, keywords, disableContact } = Astro.props;
+const { title, description, keywords, disableContact, noIndex } = Astro.props;
 const contactContent = getContactContent();
 ---
 
@@ -26,7 +28,14 @@ const contactContent = getContactContent();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    {noIndex && <meta name="robots" content="noindex" />}
     <meta name="generator" content={Astro.generator} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <HeadHrefLangs />
 
     <Seo

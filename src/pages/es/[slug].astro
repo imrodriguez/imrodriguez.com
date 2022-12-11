@@ -5,7 +5,8 @@ import Layout from "../../layouts/Layout.astro";
 changeLanguage("es");
 
 export async function getStaticPaths() {
-    const posts = await Astro.glob("/src/content/blog/*.md");
+    //const posts = await Astro.glob("/src/content/blog/*.md");
+    const posts = [];
     return posts.map(({ Content, frontmatter: { postTitle: title, seoMetaDescription: metadescription, slug, focusKeyphrase, }, }) => {
         return {
             params: { slug },
@@ -26,7 +27,7 @@ const { slug } = Astro.params;
     <h1 class="font-subtitle font-bold uppercase text-4xl text-center">
       {title}
     </h1>
-    <p class="text-center">{focusKeyphrase}</p>
+    <h2 class="text-center">{focusKeyphrase}</h2>
     <div class="container text-justify my-8">
       <Content />
     </div>
